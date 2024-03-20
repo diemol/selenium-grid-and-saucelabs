@@ -1,0 +1,12 @@
+tasks:
+  - name: Install Hugo, init submodules and start website
+    init: |
+      curl -LO https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.18.0/selenium-server-4.18.1.jar && \
+      ls -lah selenium-server-*
+    command: |
+      java -jar selenium-server-4.18.1.jar standalone --config config.toml
+
+# List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4444
+    onOpen: open-preview
