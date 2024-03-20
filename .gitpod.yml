@@ -1,5 +1,5 @@
 tasks:
-  - name: Install Hugo, init submodules and start website
+  - name: Download Selenium Grid jar and start it using the config.toml file
     init: |
       curl -LO https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.18.0/selenium-server-4.18.1.jar && \
       ls -lah selenium-server-*
